@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.language-btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  font-family: roboto;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  flex-shrink: 0;
+}
+.active-language-btn {
+  color: #0284c7;
+  border-radius: 24px;
+
+  border: 1px solid #0284c7;
+}
