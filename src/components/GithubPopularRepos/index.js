@@ -8,7 +8,7 @@ import RepositoryItem from '../RepositoryItem'
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
-  failure: 'Failure',
+  failure: 'FAILURE',
   inProgress: 'IN_PROGRESS',
 }
 
@@ -24,7 +24,6 @@ class GithubPopularRepos extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
     repositoryData: [],
-
     activeLanguageFilterId: languageFiltersData[0].id,
   }
 
@@ -100,7 +99,7 @@ class GithubPopularRepos extends Component {
     }
   }
 
-  setActiveLanguageFilterId = newFilterId => {
+  setActiveFilterId = newFilterId => {
     this.setState({activeLanguageFilterId: newFilterId}, this.getRepositories)
   }
 
@@ -113,7 +112,7 @@ class GithubPopularRepos extends Component {
             key={each.id}
             isActive={each.id === activeLanguageFilterId}
             languageFilterDetails={each}
-            setActiveLanguageFilterId={this.setActiveLanguageFilterId}
+            setActiveFilterId={this.setActiveFilterId}
           />
         ))}
       </ul>
